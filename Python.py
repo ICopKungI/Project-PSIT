@@ -30,7 +30,7 @@ def function():
     calculate_rate('rate_of_dc.csv', view1, [])
 
 def calculate_view(name, view, table):
-    print('view')
+    print('Table')
     file = open(name)
     data = csv.reader(file)
     check_view = ""
@@ -40,26 +40,26 @@ def calculate_view(name, view, table):
         for num in i[-1]:
             if num != ",":
                 check_view += num
-        if i[1] != 'date' and i[1] in view:
+        if i[1] in view:
             if view[i[1]] != "-":
                 view[i[1]] = (int(check_view)+view[i[1]])//2
             else:
                 view[i[1]] = int(check_view)
         check_view = ""
     print(*(table), sep="\n")#Output
-    print()
+    print('View')
     for i in view:#Output
         print(i, view[i])
 
 def calculate_rate(name, view, table):
-    print('rate')
+    print('Rate')
     file = open(name)
     data = csv.reader(file)
     check_view = 0
     for i in data:
         if i[2] != 'rate':
             check_view = float(i[2])
-        if i[1] != 'date' and i[1] in view:
+        if i[1] in view:
             if view[i[1]] != "-":
                 view[i[1]] = (check_view+view[i[1]])//2
             else:
