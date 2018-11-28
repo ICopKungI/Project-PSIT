@@ -18,16 +18,9 @@ def function():
     for year in range(min(set_check), max(set_check)+1):
         view[str(year)] = "-"
     calculate_view('rate_of_dc.csv', view, [])
-    view1 = dict()
-    for i in view:
-        view1[i] = "-"
-    calculate_rate('rate_of_dc.csv', view1, [])
-    for i in view1:
-        view[i] = "-"
-    calculate_view('rate_of_marvel.csv', view, [])
-    for i in view:
-        view1[i] = "-"
-    calculate_rate('rate_of_dc.csv', view1, [])
+    calculate_rate('rate_of_dc.csv', reset_view(view), [])
+    calculate_view('rate_of_marvel.csv', reset_view(view), [])
+    calculate_rate('rate_of_marvel.csv', reset_view(view), [])
 
 def calculate_view(name, view, table):
     print('Table')
@@ -67,5 +60,11 @@ def calculate_rate(name, view, table):
         check_view = 0
     for i in view:#Output
         print(i, view[i])
+
+def reset_view(view):
+    view1 = dict()
+    for i in view:
+        view1[i] = "-"
+    return view1
 
 function()
