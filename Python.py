@@ -2,7 +2,7 @@
 import csv
 def function(set_check, view):
     """ Sol """
-    print('Let Do IT')
+    print('งานการมี แต่ไม่ทำ')
     find_year('rate_of_dc.csv', set_check)
     find_year('rate_of_marvel.csv', set_check)
     for year in range(min(set_check), max(set_check)+1):
@@ -47,25 +47,28 @@ def calculate_view(name_file, view, rate, table_view, name):
                 view[i[1]] = int(check_view)
                 rate[i[1]] = check_rate
         check_view, check_rate = "", 0
+
+    """ สั่ง Print ตาราง """
+
     print()
-    print('Table view', name)
+    print('Table view', name) #ยอดคนรวม
     print()
     print("['Movie_Name', 'Year', 'View']")
     print(*(table_view), sep="\n")#Output
     print()
-    print('View', name)
+    print('View', name)#เฉลี่ยคนดู
     print()
     print('Year', ' Average_View')
 
     for i in view:#Output
         print(i, view[i])
     print()
-    print('Table rate', name)
+    print('Table rate', name)#rateรวม
     print()
     print("['Movie_Name', 'Year', 'Rate']")
     print(*(table_rate), sep="\n")#Output
     print()
-    print('Rate', name)
+    print('Rate', name)#เฉลี่ยrate
     print()
     print('Year', ' Average_Rate')
 
