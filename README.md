@@ -14,6 +14,8 @@
 โปรเจคนี้จัดทำขึ้นเพื่อ วิเคราะห์ความแตกต่าง ของข้อมูลจำนวนผู้เข้าชมภาพยนต์ของ**เครือ DC** และ **เครือMarvel** ซึ่งทั้งสองเป็นภาพยนตร์ชุดแนวซูเปอร์ฮีโรสัญชาติอเมริกัน
 ว่าเพราะเหตุใด ภาพยนต์ของเครือMarvel ถึงมีความนิยมมากกว่า DC 
 
+<img class="irc_mi" src="https://sicilianews24.it/wp-content/uploads/2017/11/Marvel-Cinematic-Universe.jpg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="158" style="margin-top: 98px;" alt="Related image">
+
 # List of Marvel movies
 -  [มหาประลัยคนเกราะเหล็ก(Iron Man)]
 -  [มนุษย์ตัวเขียวจอมพลัง(The Incredible Hulk)]
