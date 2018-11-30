@@ -1,14 +1,21 @@
 """ PROJECT PSIT 2018 """
 import csv
+import pygal
 def function(set_check, view):
     """ Sol """
+    view_dc = dict()
+    view_marvel = dict()
     print('งานการมี แต่ไม่ทำ')
     find_year('rate_of_dc.csv', set_check)
     find_year('rate_of_marvel.csv', set_check)
     for year in range(min(set_check), max(set_check)+1):
         view[str(year)] = "-"
-    calculate_view('rate_of_dc.csv', view, reset_view(view), [], "DC")
-    calculate_view('rate_of_marvel.csv', reset_view(view), reset_view(view), [], "Marvel")
+    view_dc = calculate_view('rate_of_dc.csv', view, reset_view(view), [], "DC")
+    view_marvel = calculate_view('rate_of_marvel.csv', reset_view(view), reset_view(view), [], "Marvel")
+
+
+    print(view_dc)
+    print(view_marvel)
 
 def find_year(name_file, set_check):
     """Find a year."""
@@ -77,5 +84,15 @@ def calculate_view(name_file, view, rate, table_view, name):
             print(i, "%.1f"%(rate[i]))
         else:
             print(i, rate[i])
+    return view
+
+
+    """ กราฟ """
+    line_chart = pygal.Bar()
+    line_chart.title = 'Marvel & DC [View]'
+    line_chart.x_labels = map(str, range(2005, 2019))
+    line_chart.add('Marvel', [None, None, 0, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
+    line_chart.add('DC',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
+    line_chart.render_to_file('ตาราง.svg')
 
 function(set(), dict())
