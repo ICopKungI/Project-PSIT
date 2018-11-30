@@ -12,7 +12,7 @@
 
 # The purpose of the project
 โปรเจคนี้จัดทำขึ้นเพื่อ วิเคราะห์ความแตกต่าง ของข้อมูลจำนวนผู้เข้าชมภาพยนต์ของ**เครือ DC** และ **เครือMarvel** ซึ่งทั้งสองเป็นภาพยนตร์ชุดแนวซูเปอร์ฮีโรสัญชาติอเมริกัน
-ว่าเพราะเหตุใด ภาพยนต์ของเครือMarvel ถึงมีความนิยมมากกว่า DC 
+ว่าเพราะเหตุใด ภาพยนต์ของเครือMarvel ถึงมีความนิยมมากกว่า DC
 
 <img class="irc_mi" src="https://sicilianews24.it/wp-content/uploads/2017/11/Marvel-Cinematic-Universe.jpg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="158" style="margin-top: 98px;" alt="Related image">
 
@@ -40,20 +40,20 @@
 <img class="irc_mi" src="https://i.pinimg.com/originals/88/d9/6f/88d96f717a70792492ef4c299dfc7bfa.png" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="250" style="margin-top: 18px;" alt="Related image">
 
 # List of DC Comics movies
--  แบทแมน บีกินส์
--  ซูเปอร์แมน รีเทิร์น
--  แบทแมน อัศวินรัตติกาล
--  ศึกซูเปอร์ฮีโร่พันธุ์มหากาฬ
--  โจนาห์ เฮ็กซ์ ฮีโร่หน้าบากมหากาฬ
--  กรีน แลนเทิร์น
--  แบทแมน อัศวินรัตติกาลผงาด
--  แบทแมน อัศวินรัตติกาลผงาด
--  แบทแมน ปะทะ ซูเปอร์แมน แสงอรุณแห่งยุติธรรม
--  ทีมพลีชีพ มหาวายร้าย
--  เดอะ เลโก้ แบทแมน มูฟวี่
--  วันเดอร์ วูแมน
--  จัสติซ ลีก 
- 
- 
+-  แบทแมน บีกินส์(Batman Begins)
+-  ซูเปอร์แมน รีเทิร์น(Superman Returns)
+-  แบทแมน อัศวินรัตติกาล(The Dark Knight)
+-  ศึกซูเปอร์ฮีโร่พันธุ์มหากาฬ(Watchmen)
+-  โจนาห์ เฮ็กซ์ ฮีโร่หน้าบากมหากาฬ(Jonah Hex)
+-  กรีน แลนเทิร์น(Green Lantern)
+-  แบทแมน อัศวินรัตติกาลผงาด(The Dark Knight Rises)
+-  บุรุษเหล็กซูเปอร์แมน(Man of Steel)
+-  แบทแมน ปะทะ ซูเปอร์แมน แสงอรุณแห่งยุติธรรม(Batman v Superman: Dawn of Justice)
+-  ทีมพลีชีพ มหาวายร้าย(Suicide Squad)
+-  เดอะ เลโก้ แบทแมน มูฟวี่(The Lego Batman Movie)
+-  วันเดอร์ วูแมน(Wonder Woman)
+-  จัสติซ ลีก(Justice League)
+
+
 
 
