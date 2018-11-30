@@ -20,11 +20,6 @@ def function(set_check, view):
     view_marvel1 = none(list(view_marvel.values()), [])
     rate_marvel1 = none(list(rate_marvel.values()), [])
 
-    print(view_dc1)
-    print(view_marvel1)
-    print(rate_dc1)
-    print(rate_marvel1)
-
     """ กราฟ แท่ง (คนดู) """
     line_chart = pygal.Bar()
     line_chart.title = 'Marvel & DC (ยอดคนดูในแต่ละปี)'
