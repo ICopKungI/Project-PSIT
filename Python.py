@@ -38,14 +38,14 @@ def function(set_check, view):
     line_chart.x_labels = map(str, range(2005, 2019))
     line_chart.add('DC', graph_dc)
     line_chart.add('Marvel', graph_marvel)
-    line_chart.render_to_file('ตาราง.svg')
+    line_chart.render_to_file('view.svg')
 
     """ กราฟ วงกลม (คนดู)"""
     pie_chart = pygal.Pie()
     pie_chart.title = 'รวมยอดคนดู ตั้งแต่ปี 2005-2018'
     pie_chart.add('DC', graph_dc)
     pie_chart.add('Marvel', graph_marvel)
-    pie_chart.render_to_file('ตาราง1.svg')
+    pie_chart.render_to_file('view_all.svg')
 
 
 def find_year(name_file, set_check):
