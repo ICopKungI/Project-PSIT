@@ -3,50 +3,57 @@ import csv
 import pygal
 def function(set_check, view):
     """ Sol """
-    view_dc = dict()
-    view_marvel = dict()
-    graph_dc = list()
-    graph_marvel = list()
+    view_dc, rate_dc = dict(), dict()
+    view_marvel, rate_marvel = dict(), dict()
+
     print('งานการมี แต่ไม่ทำ')
+
     find_year('rate_of_dc.csv', set_check)
     find_year('rate_of_marvel.csv', set_check)
     for year in range(min(set_check), max(set_check)+1):
         view[str(year)] = "-"
-    view_dc = calculate_view('rate_of_dc.csv', view, reset_view(view), [], "DC")
-    view_dc = list(view_dc.values())
-    view_marvel = calculate_view('rate_of_marvel.csv', reset_view(view), reset_view(view), [], "Marvel")
-    view_marvel = list(view_marvel.values())
+    view_dc, rate_dc = calculate_view('rate_of_dc.csv', view, reset_view(view), [], "DC")
+    view_dc1 = none(list(view_dc.values()), [])
+    rate_dc1 = none(list(rate_dc.values()), [])
 
+    view_marvel, rate_marvel = calculate_view('rate_of_marvel.csv', reset_view(view), reset_view(view), [], "Marvel")
+    view_marvel1 = none(list(view_marvel.values()), [])
+    rate_marvel1 = none(list(rate_marvel.values()), [])
 
-    for i in view_dc:
-        if i == '-':
-            graph_dc.append(None)
-        else:
-            graph_dc.append(int(i))
-    for i in view_marvel:
-        if i == '-':
-            graph_marvel.append(None)
-        else:
-            graph_marvel.append(int(i))
-    #print(graph_dc)
-    #print(graph_marvel)
-
+    print(view_dc1)
+    print(view_marvel1)
+    print(rate_dc1)
+    print(rate_marvel1)
 
     """ กราฟ แท่ง (คนดู) """
     line_chart = pygal.Bar()
     line_chart.title = 'Marvel & DC (ยอดคนดูในแต่ละปี)'
     line_chart.x_labels = map(str, range(2005, 2019))
-    line_chart.add('DC', graph_dc)
-    line_chart.add('Marvel', graph_marvel)
+    line_chart.add('DC', view_dc1)
+    line_chart.add('Marvel', view_marvel1)
     line_chart.render_to_file('view.svg')
 
     """ กราฟ วงกลม (คนดู)"""
     pie_chart = pygal.Pie()
     pie_chart.title = 'รวมยอดคนดู ตั้งแต่ปี 2005-2018'
-    pie_chart.add('DC', graph_dc)
-    pie_chart.add('Marvel', graph_marvel)
+    pie_chart.add('DC', view_dc1)
+    pie_chart.add('Marvel', view_marvel1)
     pie_chart.render_to_file('view_all.svg')
 
+    """ กราฟ แท่ง (เรต) """
+    line_chart = pygal.Bar()
+    line_chart.title = 'Marvel & DC (เรตติ้งในแต่ละปี)'
+    line_chart.x_labels = map(str, range(2005, 2019))
+    line_chart.add('DC', rate_dc1)
+    line_chart.add('Marvel', rate_marvel1)
+    line_chart.render_to_file('rate.svg')
+
+    """ กราฟ วงกลม (เรต)"""
+    pie_chart = pygal.Pie()
+    pie_chart.title = 'รวมยอดคนดู ตั้งแต่ปี 2005-2018'
+    pie_chart.add('DC', rate_dc1)
+    pie_chart.add('Marvel', rate_marvel1)
+    pie_chart.render_to_file('rate_all.svg')
 
 def find_year(name_file, set_check):
     """Find a year."""
@@ -79,11 +86,11 @@ def calculate_view(name_file, view, rate, table_view, name):
                 check_view += num
         if i[1] in view:
             if view[i[1]] != "-":
-                view[i[1]] += view[i[1]]
-                rate[i[1]] = (check_rate+rate[i[1]])/2
+                view[i[1]] += int(check_view)
+                rate[i[1]] = float("%.1f"%((check_rate+rate[i[1]])/2))
             else:
                 view[i[1]] = int(check_view)
-                rate[i[1]] = check_rate
+                rate[i[1]] = float("%.1f"%check_rate)
         check_view, check_rate = "", 0
 
     """ สั่ง Print ตาราง """
@@ -115,8 +122,14 @@ def calculate_view(name_file, view, rate, table_view, name):
             print(i, "%.1f"%(rate[i]))
         else:
             print(i, rate[i])
-    return view
+    return view, rate
 
-
+def none(lis, graph):
+    for i in lis:
+        if i == '-':
+            graph.append(None)
+        else:
+            graph.append(i)
+    return graph
 
 function(set(), dict())
