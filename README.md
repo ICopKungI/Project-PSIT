@@ -10,4 +10,27 @@
 
 -ภาณุพงศ์ สูงวิริยะ (บอย) 61070345
 
-- Pls Enter Your Name (Yourname?) YourID  [เขียนบรรทัดนี้เลย]
+# The purpose of the project
+โปรเจคนี้จัดทำขึ้นเพื่อ วิเคราะห์ความแตกต่าง ของข้อมูลจำนวนผู้เข้าชมภาพยนต์ของ**เครือ DC** และ **เครือMarvel** ซึ่งทั้งสองเป็นภาพยนตร์ชุดแนวซูเปอร์ฮีโรสัญชาติอเมริกัน
+ว่าเพราะเหตุใด ภาพยนต์ของเครือMarvel ถึงมีความนิยมมากกว่า DC 
+
+# List of Marvel movies
+-  [มหาประลัยคนเกราะเหล็ก(Iron Man)]
+-  [มนุษย์ตัวเขียวจอมพลัง(The Incredible Hulk)]
+-  [มหาประลัยคนเกราะเหล็ก 2(Iron Man 2)]
+-  [ธอร์ เทพเจ้าสายฟ้า(Thor)]
+-  [กัปตันอเมริกา: อเวนเจอร์ที่ 1(Captain America: The First Avenger)]
+-  [ดิ อเวนเจอร์ส(The Avengers)]
+-  [มหาประลัยคนเกราะเหล็ก 3(Iron Man 3)]
+-  [ธอร์ เทพเจ้าสายฟ้าโลกาทมิฬ(Thor: The Dark World)]
+-  [กัปตันอเมริกา: มัจจุราชอหังการ(Captain America: The Winter Soldier)]
+-  [อเวนเจอร์ส: มหาศึกอัลตรอนถล่มโลก(Avengers: Age of Ultron)]
+-  [มนุษย์มดมหากาฬ(Ant-Man)]
+-  [กัปตันอเมริกา: ศึกฮีโร่ระห่ำโลก(Captain America: Civil War)]
+-  [จอมเวทย์มหากาฬ(Doctor Strange)]
+-  [รวมพันธุ์นักสู้พิทักษ์จักรวาล 2(Guardians of the Galaxy Vol. 2)]
+-  [สไปเดอร์แมน: โฮมคัมมิ่ง(Spider-Man: Homecoming)]
+-  [ธอร์: ศึกอวสานเทพเจ้า(Thor: Ragnarok)]
+-  [แบล็ค แพนเธอร์(Black Panther)]
+-  [อเวนเจอร์ส: มหาสงครามล้างจักรวาล(Avengers: Infinity War)]
+-  [แอนท์-แมน และ เดอะ วอสพ์(Ant-Man and the Wasp)]
