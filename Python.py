@@ -30,7 +30,7 @@ def calculate_view(name_file, view, rate, table_view, name):
     """Data analysis and data extraction."""
     file = open(name_file)
     data = csv.reader(file)
-    check_rate, calculate_view, table_rate = 0, "", []
+    check_rate, check_view, table_rate = 0, "", []
     for i in data:
         if 'date' not in i:
             check_rate = float(i[2])
