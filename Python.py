@@ -49,13 +49,26 @@ def calculate_view(name_file, view, rate, table_view, name):
         check_view, check_rate = "", 0
     print()
     print('Table view', name)
+    print()
+    print("['Movie_Name', 'Year', 'View']")
     print(*(table_view), sep="\n")#Output
+    print()
     print('View', name)
+    print()
+    print('Year', ' Average_View')
+
     for i in view:#Output
         print(i, view[i])
+    print()
     print('Table rate', name)
+    print()
+    print("['Movie_Name', 'Year', 'Rate']")
     print(*(table_rate), sep="\n")#Output
+    print()
     print('Rate', name)
+    print()
+    print('Year', ' Average_Rate')
+
     for i in rate:#Output
         if rate[i] != "-":
             print(i, "%.1f"%(rate[i]))
