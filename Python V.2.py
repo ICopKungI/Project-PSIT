@@ -12,14 +12,15 @@ def main(set_check, analyze, view_dc, rate_dc):
     find_year('rate_of_marvel.csv', set_check)
     for year in range(min(set_check), max(set_check)+1):#เรียงลำดับปีตั้งแต่ปีแรกจนถึงปีล่าสุดที่มีหนังเข้าโรง
         analyze[str(year)] = None
+
     view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze), [], "DC")
     view_dc, rate_dc = list(view_dc.values()), list(rate_dc.values())
 
     view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [], "Marvel")
     view_marvel, rate_marvel = list(view_marvel.values()), list(rate_marvel.values())
 
-    graph(set_check, view_dc, view_marvel, 'view.svg', 'view_all.svg')
-    graph(set_check, rate_dc, rate_marvel, 'rate.svg', 'rate_all.svg')
+    graph(set_check, view_dc, view_marvel, 'Test_view.svg', 'Test_view_all.svg')
+    graph(set_check, rate_dc, rate_marvel, 'Test_rate.svg', 'Test_rate_all.svg')
 
 def find_year(name_file, set_check):
     """Find a year."""

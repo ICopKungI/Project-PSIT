@@ -12,6 +12,7 @@ def main(set_check, analyze, view_dc, rate_dc):
     find_year('rate_of_marvel.csv', set_check)
     for year in range(min(set_check), max(set_check)+1):#เรียงลำดับปีตั้งแต่ปีแรกจนถึงปีล่าสุดที่มีหนังเข้าโรง
         analyze[str(year)] = None
+
     view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze), [], "DC")
     view_dc, rate_dc = list(view_dc.values()), list(rate_dc.values())
 
@@ -68,9 +69,7 @@ def separate(name_file, analyze, rate, table_view, name):
     print()
     print('Table view', name) #ยอดคนรวม
     print()
-    print("['Movie_Name', 'Year', 'View']")
-    print(*(table_view), sep="\n")#Output
-    print()
+    print("['Movie_Name', 'Year', 'View']", *(table_view), "", sep="\n")#Output
     print('View', name)#เฉลี่ยคนดู
     print()
     print('Year', ' Total_View')
@@ -80,9 +79,7 @@ def separate(name_file, analyze, rate, table_view, name):
     print()
     print('Table rate', name)#rateรวม
     print()
-    print("['Movie_Name', 'Year', 'Rate']")
-    print(*(table_rate), sep="\n")#Output
-    print()
+    print("['Movie_Name', 'Year', 'Rate']", *(table_rate), "", sep="\n")#Output
     print('Rate', name)#เฉลี่ยrate
     print()
     print('Year', ' Average_Rate')
@@ -92,7 +89,6 @@ def separate(name_file, analyze, rate, table_view, name):
             print(i, rate[i])
         else:
             print(i, rate[i])
-
 
     return analyze, rate
 
