@@ -23,7 +23,7 @@ def main(set_check, analyze, view_dc, rate_dc):
 
 def find_year(name_file, set_check):
     """Find a year."""
-    """หาปีที่ค่าย DC กับ Marvel เข้าปีแรกในจนถึงปัจจุบัน"""
+    """หาปีที่ค่าย DC และ Marvel เข้าปีแรกในจนถึงปัจจุบัน"""
     file = open(name_file)
     data = csv.reader(file)
     for year in data:
@@ -33,7 +33,7 @@ def find_year(name_file, set_check):
 
 def reset_analyze(analyze):
     """Remain the same value Need to reset."""
-    """View ยังคงมีค่าเก่าที่คิดไปแล้วอยู่จึงต้องทำให้Viewกลับมาเป็น Noneเพื่อเอาไปใช้ต่อ"""
+    """analyze1 ยังคงมีค่าเก่าที่คิดไปแล้วอยู่จึงต้องทำให้Viewกลับมาเป็น Noneเพื่อเอาไปใช้ต่อ"""
     analyze1 = dict()
     for i in analyze:
         analyze1[i] = None
