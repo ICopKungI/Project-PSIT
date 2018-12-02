@@ -19,7 +19,7 @@ def main(set_check, analyze, view_dc, rate_dc):
     view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [], "Marvel")
     view_marvel, rate_marvel = list(view_marvel.values()), list(rate_marvel.values())
 
-    graph(set_check, view_dc, view_marvel, ['Marvel & DC (เรตติ้งคนดูในแต่ละปี)', 'view_bar.svg', 'รวมยอดคนดู ตั้งแต่ปี 2005-2018', 'view_pie.svg'])
+    graph(set_check, view_dc, view_marvel, ['Marvel & DC (คนดูในแต่ละปี)', 'view_bar.svg', 'รวมยอดคนดู ตั้งแต่ปี 2005-2018', 'view_pie.svg'])
     graph(set_check, rate_dc, rate_marvel, ['Marvel & DC (เรตติ้งในแต่ละปี)', 'rate_bar.svg', 'รวมเรตติ้งคนดู ตั้งแต่ปี 2005-2018', 'rate_pie.svg'])
 
 def find_year(name_file, set_check):
