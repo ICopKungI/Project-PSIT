@@ -22,7 +22,7 @@ def function(set_check, view):
 
     """ กราฟ แท่ง (คนดู) """
     line_chart = pygal.Bar()
-    line_chart.title = 'Marvel & DC (เรตติ้งคนดูในแต่ละปี)'
+    line_chart.title = 'Marvel & DC (คนดูในแต่ละปี)'
     line_chart.x_labels = map(str, range(2005, 2019))
     line_chart.add('DC', view_dc1)
     line_chart.add('Marvel', view_marvel1)
@@ -30,7 +30,7 @@ def function(set_check, view):
 
     """ กราฟ วงกลม (คนดู)"""
     pie_chart = pygal.Pie()
-    pie_chart.title = 'รวมเรตติ้งคนดู ตั้งแต่ปี 2005-2018'
+    pie_chart.title = 'รวมยอดคนดู ตั้งแต่ปี 2005-2018'
     pie_chart.add('DC', view_dc1)
     pie_chart.add('Marvel', view_marvel1)
     pie_chart.render_to_file('view_all.svg')
@@ -45,7 +45,7 @@ def function(set_check, view):
 
     """ กราฟ วงกลม (เรต)"""
     pie_chart = pygal.Pie()
-    pie_chart.title = 'รวมยอดคนดู ตั้งแต่ปี 2005-2018'
+    pie_chart.title = 'รวมเรตติ้งคนดู ตั้งแต่ปี 2005-2018'
     pie_chart.add('DC', rate_dc1)
     pie_chart.add('Marvel', rate_marvel1)
     pie_chart.render_to_file('rate_all.svg')
