@@ -1,7 +1,7 @@
 """ PROJECT PSIT 2018 """
 """หมายเหตุ V.1 ย่อโค้ดและเปลี่ยนชื่อตัวแปรให้เข้าใจง่ายขึ้น พร้อมคอมเมนเป็นภาษาไทยเพื่ออธิบายโค้ดเพิ่มเติม"""
 import csv
-#import pygal #หมายเหตุ ต้องติดตั้งโปรแกรมเพิ่มเติมถึงจะรัน imprt pygal ได้
+import pygal #หมายเหตุ ต้องติดตั้งโปรแกรมเพิ่มเติมถึงจะรัน imprt pygal ได้
 def main(set_check, analyze, view_dc, rate_dc):
     """ Sol """
     view_marvel, rate_marvel = dict(), dict()
