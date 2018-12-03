@@ -1,11 +1,10 @@
 """ PROJECT PSIT 2018 """
 """หมายเหตุ V.1 ย่อโค้ดและเปลี่ยนชื่อตัวแปรให้เข้าใจง่ายขึ้น พร้อมคอมเมนเป็นภาษาไทยเพื่ออธิบายโค้ดเพิ่มเติม"""
 import csv
-import pygal #หมายเหตุ ต้องติดตั้งโปรแกรมเพิ่มเติมถึงจะรัน imprt pygal ได้
+#import pygal #หมายเหตุ ต้องติดตั้งโปรแกรมเพิ่มเติมถึงจะรัน imprt pygal ได้
 def main(set_check, analyze, view_dc, rate_dc):
     """ Sol """
     view_marvel, rate_marvel = dict(), dict()
-
     print('งานการมี แต่ไม่ทำ')
 
     find_year('rate_of_dc.csv', set_check)
@@ -43,16 +42,16 @@ def reset_analyze(analyze):
 def separate(name_file, analyze, rate, table_view, name):
     """Data analysis and data extraction."""
     file = open(name_file)
-    data = csv.reader(file)
-    check_rate, check_view, table_rate = 0, "", []
+    check_rate, check_view, table_rate, data = 0, "", [], csv.reader(file)
     for i in data:#ลูปแยก Rate กับ View
         if 'date' not in i:
             check_rate = float(i[2])
             table_view += [[*(i[:2]), i[-1]]]
             table_rate += [i[:3]]
-        for num in i[-1]:#เอา "," ออกจากยอด View
-            if num != ",":
-                check_view += num
+        check_view = i[-1]
+        while "," in check_view:#เอา "," ออกจากยอด View
+            check = check_view.find(",")
+            check_view = check_view[:check]+check_view[check+1:]
         if i[1] in analyze:
             if analyze[i[1]] != None:#ในกรณีที่ใน1ปีมีมากกว่า 1 เรื่อง
                 analyze[i[1]] += int(check_view)
@@ -61,7 +60,6 @@ def separate(name_file, analyze, rate, table_view, name):
                 analyze[i[1]] = int(check_view)
                 rate[i[1]] = float("%.1f"%check_rate)
         check_view, check_rate = "", 0
-
 
     """ส่วนของดีบัค"""
     """ สั่ง Print ตาราง """
