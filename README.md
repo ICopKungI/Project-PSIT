@@ -54,6 +54,6 @@
 -  วันเดอร์ วูแมน(Wonder Woman)
 -  จัสติซ ลีก(Justice League)
 
-![Alt text](http://www.it.kmitl.ac.th/~it61070339/PIC/rate_bar.svg)
+ [Marvel & DC (เรตติ้งในแต่ละปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/rate_bar.svg)
 ![Alt text](./rate_bar.svg)
 
