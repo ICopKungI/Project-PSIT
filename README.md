@@ -59,3 +59,6 @@
 
  [Marvel & DC (เรตติ้งรวมทุกปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/rate_pie.svg)
 ![Alt text](./rate_pie.svg) 
+
+ [Marvel & DC (เรตติ้งรวมทุกปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/view_bar.svg)
+![Alt text](./view_bar.svg)  
