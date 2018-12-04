@@ -37,6 +37,7 @@
 -  อเวนเจอร์ส: มหาสงครามล้างจักรวาล(Avengers: Infinity War)
 -  แอนท์-แมน และ เดอะ วอสพ์(Ant-Man and the Wasp)
 
+![Alt text](./visualize/output/user_chart.svg)
 <img class="irc_mi" src="https://i.pinimg.com/originals/88/d9/6f/88d96f717a70792492ef4c299dfc7bfa.png" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="250" style="margin-top: 18px;" alt="Related image">
 
 # List of DC Comics movies
@@ -54,6 +55,6 @@
 -  วันเดอร์ วูแมน(Wonder Woman)
 -  จัสติซ ลีก(Justice League)
 
-
+![Alt text](./Project-PSIT/blob/master/rate_bar.svg)
 
 
