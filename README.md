@@ -60,5 +60,8 @@
  [Marvel & DC (เรตติ้งรวมทุกปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/rate_pie.svg)
 ![Alt text](./rate_pie.svg) 
 
- [Marvel & DC (เรตติ้งรวมทุกปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/view_bar.svg)
+ [Marvel & DC (คนดูในแต่ละปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/view_bar.svg)
 ![Alt text](./view_bar.svg)  
+
+ [Marvel & DC (คนดูในรวมทุกปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/view_pie.svg)
+![Alt text](./view_pie.svg)   
