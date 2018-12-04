@@ -55,6 +55,6 @@
 -  วันเดอร์ วูแมน(Wonder Woman)
 -  จัสติซ ลีก(Justice League)
 
-![Alt text](./Project-PSIT/blob/master/rate_bar.svg)
+![Alt text](./rate_bar.svg)
 
 
