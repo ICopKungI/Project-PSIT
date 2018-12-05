@@ -50,8 +50,8 @@ def separate(name_file, analyze, rate, table_view, name):
             table_rate += [i[:3]]
         check_view = i[-1]
         while "," in check_view:#เอา "," ออกจากยอด View
-            check = check_view.find(",")
-            check_view = check_view[:check]+check_view[check+1:]
+            point = check_view.find(",")
+            check_view = check_view[:point]+check_view[point+1:]
         if i[1] in analyze:
             if analyze[i[1]] != None:#ในกรณีที่ใน1ปีมีมากกว่า 1 เรื่อง
                 analyze[i[1]] += int(check_view)
