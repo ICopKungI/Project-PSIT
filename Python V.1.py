@@ -42,7 +42,7 @@ def separate(name_file, analyze, rate, table_view, name):
         while "," in check_view:#เอา "," ออกจากยอด View
             point = check_view.find(",")
             check_view = check_view[:point]+check_view[point+1:]
-        if i[1] in analyze:
+        if i[1] in analyze:#ปีนั้นมีหนังเข้าโรงหนัง
             if analyze[i[1]] == None:#นำยอด View และ Rate เข้า Dict
                 analyze[i[1]] = int(check_view)
                 rate[i[1]] = float("%.1f"%check_rate)
