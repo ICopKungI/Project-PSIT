@@ -68,7 +68,7 @@
 
 # หมายเหตุ
 - [Python.py](https://github.com/ICopKungI/Project-PSIT/blob/master/Python.py) เป็นไฟล์ code python ต้นแบบก่อนที่จะมีการปรับปรุง
-- [Python V.1.py](https://github.com/ICopKungI/Project-PSIT/blob/master/Python%20V.1.py).py เป็นไฟล์ code python โดยรวมของ Project มีการแสดงเป็นตาราง และ กราฟ เมื่อสั่งทำงาน
+- [Python V.1.py](https://github.com/ICopKungI/Project-PSIT/blob/master/Python%20V.1.py) เป็นไฟล์ code python โดยรวมของ Project มีการแสดงเป็นตาราง และ กราฟ เมื่อสั่งทำงาน
 - [Python V.2.py](https://github.com/ICopKungI/Project-PSIT/blob/master/Python%20V.2.py) เป็นไฟล์ code python ที่สรุปมาจาก Python V.1.py และ เมื่อสั่งทำงานจะแสดงเฉพาะกราฟ
 - [rate_of_dc.csv](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_of_dc.csv) เป็นไฟล์ ข้อมูลของDC ของ Project ที่จะนำมาใช้งาน
 - [rate_of_marvel.csv](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_of_marvel.csv) เป็นไฟล์ ข้อมูลของMarvel ของ Project ที่จะนำมาใช้งาน
