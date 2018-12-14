@@ -12,10 +12,10 @@ def main(set_year, analyze, view_dc, rate_dc):
     for year in range(min(set_year), max(set_year)+1):#เรียงลำดับปีตั้งแต่ปีแรกจนถึงปีล่าสุดที่มีหนังเข้าโรง
         analyze[str(year)] = None
 
-    view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze), [], "DC")
+    view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze), [])
     view_dc, rate_dc = list(view_dc.values()), list(rate_dc.values())
 
-    view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [], "Marvel")
+    view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [])
     view_marvel, rate_marvel = list(view_marvel.values()), list(rate_marvel.values())
 
     graph(set_year, view_dc, view_marvel, ['Marvel & DC (คนดูในแต่ละปี)', 'view_bar.svg', 'รวมยอดคนดู ตั้งแต่ปี 2005-2018', 'view_pie.svg'])
