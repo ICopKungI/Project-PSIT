@@ -50,7 +50,6 @@ def separate(name_file, analyze, rate, table_view, name):
                 analyze[line[1]] += int(check_view)
                 rate[line[1]] = float("%.1f"%((check_rate+rate[line[1]])/2))#เฉลี่ย Rate
         check_view, check_rate = "", 0
-    return analyze, rate
 
     """ส่วนของดีบัค"""
     """ สั่ง Print ตาราง """
