@@ -13,10 +13,7 @@ def main(set_year, analyze, view_dc, rate_dc):
         analyze[str(year)] = None
 
     view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze), [], "DC")
-    view_dc, rate_dc = list(view_dc.values()), list(rate_dc.values())
-
     view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [], "Marvel")
-    view_marvel, rate_marvel = list(view_marvel.values()), list(rate_marvel.values())
 
     graph(set_year, view_dc, view_marvel, 'view.svg', 'view_all.svg')
     graph(set_year, rate_dc, rate_marvel, 'rate.svg', 'rate_all.svg')
@@ -35,17 +32,15 @@ def separate(name_file, analyze, rate, table_view, name):
     check_rate, check_view, table_rate, data = 0, "", [], csv.reader(open(name_file))
     for line in data:#ลูปแยก Rate กับ View
         if 'date' not in line:
-            check_rate = float(line[2])
+            check_rate, check_view = float(line[2]), line[-1]
             table_view += [[*(line[:2]), line[-1]]]
             table_rate += [line[:3]]
-        check_view = line[-1]
         while "," in check_view:#เอา "," ออกจากยอด View
             point = check_view.find(",")
             check_view = check_view[:point]+check_view[point+1:]
         if line[1] in analyze:#ปีนั้นมีหนังเข้าโรงหนัง
             if analyze[line[1]] == None:#นำยอด View และ Rate เข้า Dict
-                analyze[line[1]] = int(check_view)
-                rate[line[1]] = float("%.1f"%check_rate)
+                analyze[line[1]], rate[line[1]] = int(check_view), float("%.1f"%check_rate)
             else:#ในกรณีที่ใน1ปีมีมากกว่า 1 เรื่อง
                 analyze[line[1]] += int(check_view)
                 rate[line[1]] = float("%.1f"%((check_rate+rate[line[1]])/2))#เฉลี่ย Rate
@@ -78,7 +73,7 @@ def separate(name_file, analyze, rate, table_view, name):
         else:
             print(i, rate[i])
 
-    return analyze, rate
+    return list(view.values()), list(rate.values())
 
 def reset_analyze(analyze):
     """Remain the same value Need to reset."""
