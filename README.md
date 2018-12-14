@@ -79,7 +79,7 @@
 - [rate_of_dc.csv](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_of_dc.csv) เป็นไฟล์ ข้อมูลของDC ของ Project ที่จะนำมาใช้งาน
 - [rate_of_marvel.csv](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_of_marvel.csv) เป็นไฟล์ ข้อมูลของMarvel ของ Project ที่จะนำมาใช้งาน
 - [rate_bar.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_bar.svg) เป็นไฟล์ กราฟเรตติ้งแบบแท่ง ที่บอกเรตติ้งในแต่ะปีตั้งแต่ปี 2005-2018
-- [rate_pie.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_pie.svg) เป็นไฟล์ กราฟเรตติ้งแบบวงกลม ที่สรุปยอดรวมของเรตติ้งในปี 2005-2018
+- [rate_pie.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_pie.svg) เป็นไฟล์ กราฟเรตติ้งแบบวงกลม ที่สรุปยอดรวมของเรตติ้งตั้งแต่ปี 2005-2018
 - [view_bar.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/view_bar.svg) เป็นไฟล์ กราฟคนดูแบบแท่ง ที่บอกยอดคนดูในแต่ละปี 2005-2018
 - [view_pie.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/view_pie.svg) เป็นไฟล์ กราฟคนดูแบบวงกลม ที่สรุปยอดคนดูรวมตั้งแต่ปี 2005-2018
 - เมื่อทำการ run code python จะสร้างไฟล์กราฟ จำนวน4ไฟล์
