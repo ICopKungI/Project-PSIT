@@ -65,7 +65,8 @@ def separate(name_file, analyze, rate, table_view, name):
 def graph(set_year, dc, marvel, name):
     """Create a graph"""
     """สร้างกราฟทั้งแบบ แท่ง และ วงกลม"""
-
+    #set_year = ปี
+    #name = ชื่อกราฟ
     """ กราฟ แท่ง (คนดู) """
     line_chart = pygal.Bar()
     line_chart.title = name[0]#หัวข้อกราฟแท่ง
