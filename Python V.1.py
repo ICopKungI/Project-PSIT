@@ -31,14 +31,6 @@ def find_year(name_file, set_check):
             set_check.add(int(year[1]))
     return set_check
 
-def reset_analyze(analyze):
-    """Remain the same value Need to reset."""
-    """analyze1 ยังคงมีค่าเก่าที่คิดไปแล้วอยู่จึงต้องทำให้Viewกลับมาเป็น Noneเพื่อเอาไปใช้ต่อ"""
-    analyze1 = dict()
-    for i in analyze:
-        analyze1[i] = None
-    return analyze1
-
 def separate(name_file, analyze, rate, table_view, name):
     """Data analysis and data extraction."""
     file = open(name_file)
@@ -89,6 +81,14 @@ def separate(name_file, analyze, rate, table_view, name):
             print(i, rate[i])
 
     return analyze, rate
+
+def reset_analyze(analyze):
+    """Remain the same value Need to reset."""
+    """analyze1 ยังคงมีค่าเก่าที่คิดไปแล้วอยู่จึงต้องทำให้Viewกลับมาเป็น Noneเพื่อเอาไปใช้ต่อ"""
+    analyze1 = dict()
+    for i in analyze:
+        analyze1[i] = None
+    return analyze1
 
 def graph(set_year, dc, marvel, name_file, name_file_all):
     """Create a graph"""
