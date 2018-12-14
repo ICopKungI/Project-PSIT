@@ -67,9 +67,9 @@
 ![Alt text](./view_pie.svg)   
 
 # หมายเหตุ
-- Python.py เป็นไฟล์ code python ต้นแบบก่อนที่จะมีการปรับปรุง
-- Python V.1.py เป็นไฟล์ code python โดยรวมของ Project มีการแสดงเป็นตาราง และ กราฟ เมื่อสั่งทำงาน
-- Python V.2.py เป็นไฟล์ code python ที่สรุปมาจาก Python V.1.py และ เมื่อสั่งทำงานจะแสดงเฉพาะกราฟ
+- [Python.py](https://github.com/ICopKungI/Project-PSIT/blob/master/Python.py) เป็นไฟล์ code python ต้นแบบก่อนที่จะมีการปรับปรุง
+- [Python V.1](https://github.com/ICopKungI/Project-PSIT/blob/master/Python%20V.1.py).py เป็นไฟล์ code python โดยรวมของ Project มีการแสดงเป็นตาราง และ กราฟ เมื่อสั่งทำงาน
+- [Python V.2.py](https://github.com/ICopKungI/Project-PSIT/blob/master/Python%20V.2.py) เป็นไฟล์ code python ที่สรุปมาจาก Python V.1.py และ เมื่อสั่งทำงานจะแสดงเฉพาะกราฟ
 - rate_of_dc.csv เป็นไฟล์ ข้อมูลเรตติ้ง ของ Project ที่จะนำมาใช้งาน
 - rate_of_marvel.csv เป็นไฟล์ ข้อมูลผู้เข้าชม ของ Project ที่จะนำมาใช้งาน
 - rate_bar.svg เป็นไฟล์ กราฟเรตติ้งแบบแท่ง ที่บอกเรตติ้งในแต่ะปีตั้งแต่ปี 2005-2018
