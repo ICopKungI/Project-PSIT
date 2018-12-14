@@ -12,7 +12,7 @@ def main(set_year, analyze, view_dc, rate_dc):
     for year in range(min(set_year), max(set_year)+1):#เรียงลำดับปีตั้งแต่ปีแรกจนถึงปีล่าสุดที่มีหนังเข้าโรง
         analyze[str(year)] = None
 
-    view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze), [])
+    view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze))
     view_dc, rate_dc = list(view_dc.values()), list(rate_dc.values())
 
     view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [])
@@ -30,14 +30,12 @@ def find_year(name_file, set_year):
             set_year.add(int(line[1]))
     return set_year
 
-def separate(name_file, analyze, rate, table_view, name):
+def separate(name_file, analyze, rate):
     """Data analysis and data extraction."""
-    check_rate, check_view, table_rate, data = 0, "", [], csv.reader(open(name_file))
+    check_rate, check_view, data = 0, "", csv.reader(open(name_file))
     for line in data:#ลูปแยก Rate กับ View
         if 'date' not in line:
             check_rate = float(line[2])
-            table_view += [[*(line[:2]), line[-1]]]
-            table_rate += [line[:3]]
         check_view = line[-1]
         while "," in check_view:#เอา "," ออกจากยอด View
             point = check_view.find(",")
