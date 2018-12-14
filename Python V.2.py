@@ -25,30 +25,30 @@ def find_year(name_file, set_year):
     """Find a year."""
     """หาปีที่ค่าย DC และ Marvel เข้าปีแรกในจนถึงปัจจุบัน"""
     data = csv.reader(open(name_file))
-    for year in data:
-        if "date" not in year:
-            set_year.add(int(year[1]))
+    for line in data:
+        if "date" not in line:
+            set_year.add(int(line[1]))
     return set_year
 
 def separate(name_file, analyze, rate, table_view, name):
     """Data analysis and data extraction."""
     check_rate, check_view, table_rate, data = 0, "", [], csv.reader(open(name_file))
-    for i in data:#ลูปแยก Rate กับ View
-        if 'date' not in i:
-            check_rate = float(i[2])
-            table_view += [[*(i[:2]), i[-1]]]
-            table_rate += [i[:3]]
-        check_view = i[-1]
+    for line in data:#ลูปแยก Rate กับ View
+        if 'date' not in line:
+            check_rate = float(line[2])
+            table_view += [[*(line[:2]), line[-1]]]
+            table_rate += [line[:3]]
+        check_view = line[-1]
         while "," in check_view:#เอา "," ออกจากยอด View
             point = check_view.find(",")
             check_view = check_view[:point]+check_view[point+1:]
-        if i[1] in analyze:#ปีนั้นมีหนังเข้าโรงหนัง
-            if analyze[i[1]] == None:#นำยอด View และ Rate เข้า Dict
-                analyze[i[1]] = int(check_view)
-                rate[i[1]] = float("%.1f"%check_rate)
+        if line[1] in analyze:#ปีนั้นมีหนังเข้าโรงหนัง
+            if analyze[line[1]] == None:#นำยอด View และ Rate เข้า Dict
+                analyze[line[1]] = int(check_view)
+                rate[line[1]] = float("%.1f"%check_rate)
             else:#ในกรณีที่ใน1ปีมีมากกว่า 1 เรื่อง
-                analyze[i[1]] += int(check_view)
-                rate[i[1]] = float("%.1f"%((check_rate+rate[i[1]])/2))#เฉลี่ย Rate
+                analyze[line[1]] += int(check_view)
+                rate[line[1]] = float("%.1f"%((check_rate+rate[line[1]])/2))#เฉลี่ย Rate
         check_view, check_rate = "", 0
     return analyze, rate
 
@@ -56,8 +56,8 @@ def reset_analyze(analyze):
     """Remain the same value Need to reset."""
     """analyze1 ยังคงมีค่าเก่าที่คิดไปแล้วอยู่จึงต้องทำให้Viewกลับมาเป็น Noneเพื่อเอาไปใช้ต่อ"""
     analyze1 = dict()
-    for i in analyze:
-        analyze1[i] = None
+    for year in analyze:
+        analyze1[year] = None
     return analyze1
 
 def graph(set_year, dc, marvel, name):
