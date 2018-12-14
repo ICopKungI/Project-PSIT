@@ -15,7 +15,7 @@ def main(set_year, analyze, view_dc, rate_dc):
     view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze))
     view_dc, rate_dc = list(view_dc.values()), list(rate_dc.values())
 
-    view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [])
+    view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze))
     view_marvel, rate_marvel = list(view_marvel.values()), list(rate_marvel.values())
 
     graph(set_year, view_dc, view_marvel, ['Marvel & DC (คนดูในแต่ละปี)', 'view_bar.svg', 'รวมยอดคนดู ตั้งแต่ปี 2005-2018', 'view_pie.svg'])
