@@ -65,3 +65,8 @@
 
  [Marvel & DC (คนดูในรวมทุกปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/view_pie.svg)
 ![Alt text](./view_pie.svg)   
+
+#หมายเหตุ
+- Python V.1.py เป็นไฟล์ code python โดยรวมของ Project มีการแสดงเป็นตาราง และ กราฟ เมื่อสั่งทำงาน
+- Python V.2.py เป็นไฟล์ code python ที่สรุปมาจาก Python V.1.py และ เมื่อสั่งทำงานจะแสดงเฉพาะกราฟ
+- rate_of_dc.csv เป็นไฟล์ 
