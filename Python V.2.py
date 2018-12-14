@@ -24,8 +24,7 @@ def main(set_year, analyze, view_dc, rate_dc):
 def find_year(name_file, set_year):
     """Find a year."""
     """หาปีที่ค่าย DC และ Marvel เข้าปีแรกในจนถึงปัจจุบัน"""
-    file = open(name_file)
-    data = csv.reader(file)
+    data = csv.reader(open(name_file))
     for year in data:
         if "date" not in year:
             set_year.add(int(year[1]))
@@ -33,8 +32,7 @@ def find_year(name_file, set_year):
 
 def separate(name_file, analyze, rate, table_view, name):
     """Data analysis and data extraction."""
-    file = open(name_file)
-    check_rate, check_view, table_rate, data = 0, "", [], csv.reader(file)
+    check_rate, check_view, table_rate, data = 0, "", [], csv.reader(open(name_file))
     for i in data:#ลูปแยก Rate กับ View
         if 'date' not in i:
             check_rate = float(i[2])
@@ -45,12 +43,12 @@ def separate(name_file, analyze, rate, table_view, name):
             point = check_view.find(",")
             check_view = check_view[:point]+check_view[point+1:]
         if i[1] in analyze:
-            if analyze[i[1]] != None:#ในกรณีที่ใน1ปีมีมากกว่า 1 เรื่อง
-                analyze[i[1]] += int(check_view)
-                rate[i[1]] = float("%.1f"%((check_rate+rate[i[1]])/2))#เฉลี่ย Rate
-            else:#นำยอด View และ Rate เข้า Dict
+            if analyze[i[1]] == None:#นำยอด View และ Rate เข้า Dict
                 analyze[i[1]] = int(check_view)
                 rate[i[1]] = float("%.1f"%check_rate)
+            else:#ในกรณีที่ใน1ปีมีมากกว่า 1 เรื่อง
+                analyze[i[1]] += int(check_view)
+                rate[i[1]] = float("%.1f"%((check_rate+rate[i[1]])/2))#เฉลี่ย Rate
         check_view, check_rate = "", 0
     return analyze, rate
 
