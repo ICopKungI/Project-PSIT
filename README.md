@@ -82,4 +82,4 @@
 - [rate_pie.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/rate_pie.svg) เป็นไฟล์ กราฟเรตติ้งแบบวงกลม ที่สรุปยอดรวมของเรตติ้งในปี 2005-2018
 - [view_bar.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/view_bar.svg) เป็นไฟล์ กราฟคนดูแบบแท่ง ที่บอกยอดคนดูในแต่ละปี 2005-2018
 - [view_pie.svg](https://github.com/ICopKungI/Project-PSIT/blob/master/view_pie.svg) เป็นไฟล์ กราฟคนดูแบบวงกลม ที่สรุปยอดคนดูรวมตั้งแต่ปี 2005-2018
-- *เมื่อทำการ run code python จะสร้างไฟล์กราฟ จำนวน4ไฟล์
+- เมื่อทำการ run code python จะสร้างไฟล์กราฟ จำนวน4ไฟล์
