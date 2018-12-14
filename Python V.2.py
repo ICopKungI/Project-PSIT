@@ -2,14 +2,14 @@
 """หมายเหตุ V.2 นำดีบัคของ V.1 ออกและ ***น่าจะ*** เป็นโค้ดที่สมบูรณ์ที่สุด"""
 import csv
 import pygal #หมายเหตุ ต้องติดตั้งโปรแกรมเพิ่มเติมถึงจะรัน imprt pygal ได้
-def main(set_check, analyze, view_dc, rate_dc):
+def main(set_year, analyze, view_dc, rate_dc):
     """ Sol """
     view_marvel, rate_marvel = dict(), dict()
     print('งานการมี แต่ไม่ทำ')
 
-    find_year('rate_of_dc.csv', set_check)
-    find_year('rate_of_marvel.csv', set_check)
-    for year in range(min(set_check), max(set_check)+1):#เรียงลำดับปีตั้งแต่ปีแรกจนถึงปีล่าสุดที่มีหนังเข้าโรง
+    find_year('rate_of_dc.csv', set_year)
+    find_year('rate_of_marvel.csv', set_year)
+    for year in range(min(set_year), max(set_year)+1):#เรียงลำดับปีตั้งแต่ปีแรกจนถึงปีล่าสุดที่มีหนังเข้าโรง
         analyze[str(year)] = None
 
     view_dc, rate_dc = separate('rate_of_dc.csv', analyze, reset_analyze(analyze), [], "DC")
@@ -18,18 +18,18 @@ def main(set_check, analyze, view_dc, rate_dc):
     view_marvel, rate_marvel = separate('rate_of_marvel.csv', reset_analyze(analyze), reset_analyze(analyze), [], "Marvel")
     view_marvel, rate_marvel = list(view_marvel.values()), list(rate_marvel.values())
 
-    graph(set_check, view_dc, view_marvel, ['Marvel & DC (คนดูในแต่ละปี)', 'view_bar.svg', 'รวมยอดคนดู ตั้งแต่ปี 2005-2018', 'view_pie.svg'])
-    graph(set_check, rate_dc, rate_marvel, ['Marvel & DC (เรตติ้งในแต่ละปี)', 'rate_bar.svg', 'รวมเรตติ้งคนดู ตั้งแต่ปี 2005-2018', 'rate_pie.svg'])
+    graph(set_year, view_dc, view_marvel, ['Marvel & DC (คนดูในแต่ละปี)', 'view_bar.svg', 'รวมยอดคนดู ตั้งแต่ปี 2005-2018', 'view_pie.svg'])
+    graph(set_year, rate_dc, rate_marvel, ['Marvel & DC (เรตติ้งในแต่ละปี)', 'rate_bar.svg', 'รวมเรตติ้งคนดู ตั้งแต่ปี 2005-2018', 'rate_pie.svg'])
 
-def find_year(name_file, set_check):
+def find_year(name_file, set_year):
     """Find a year."""
     """หาปีที่ค่าย DC และ Marvel เข้าปีแรกในจนถึงปัจจุบัน"""
     file = open(name_file)
     data = csv.reader(file)
     for year in data:
         if "date" not in year:
-            set_check.add(int(year[1]))
-    return set_check
+            set_year.add(int(year[1]))
+    return set_year
 
 def separate(name_file, analyze, rate, table_view, name):
     """Data analysis and data extraction."""
