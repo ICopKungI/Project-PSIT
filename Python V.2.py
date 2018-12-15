@@ -59,7 +59,7 @@ def graph(set_year, dc, marvel, name):
     """สร้างกราฟทั้งแบบ แท่ง และ วงกลม"""
     #set_year = ปี
     #name = ชื่อกราฟ
-    """ กราฟ แท่ง (คนดู) """
+    """ กราฟ แท่ง """
     line_chart = pygal.Bar()
     line_chart.title = name[0]#หัวข้อกราฟแท่ง
     line_chart.x_labels = map(str, range(min(set_year), max(set_year)+1))
@@ -67,7 +67,7 @@ def graph(set_year, dc, marvel, name):
     line_chart.add('Marvel', marvel)
     line_chart.render_to_file(name[1])#ชื่อไฟล์กราฟแท่ง
 
-    """ กราฟ วงกลม (คนดู)"""
+    """ กราฟ วงกลม """
     pie_chart = pygal.Pie()
     pie_chart.title = name[2]#หัวข้อกราฟวงกลม
     pie_chart.add('DC', dc)
