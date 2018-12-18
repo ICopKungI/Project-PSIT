@@ -54,6 +54,7 @@
 -  เดอะ เลโก้ แบทแมน มูฟวี่(The Lego Batman Movie) **2017**
 -  วันเดอร์ วูแมน(Wonder Woman) **2017**
 -  จัสติซ ลีก(Justice League) **2017**
+-  อควาแมน เจ้าสมุทร(Aquaman) **2018** #เนื่องจากรวบรวมข้อมูล ปี 2005 - พ.ย.2018 จึงไม่ได้รวมข้อมูลไปด้วย
 
  [Marvel & DC (เรตติ้งในแต่ละปี)](http://www.it.kmitl.ac.th/~it61070339/PIC/rate_bar.svg)
 ![Alt text](./rate_bar.svg)
